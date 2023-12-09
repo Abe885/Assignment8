@@ -28,7 +28,7 @@ public class Assignment8 {
 
     /**
      * This method will return the numbers that you'll need to process from the list
-     * of Integers. However, it can only return 1000 records at a time. You will
+     *      * of Integers. However, it can only return 1000 records at a time. You will
      * need to call this method 1,000 times in order to retrieve all 1,000,000
      * numbers from the list
      * 
@@ -47,6 +47,8 @@ public class Assignment8 {
         try {
             Thread.sleep(500);
         } catch (InterruptedException e) {
+            System.err.println("Thread sleep interrupted: " + e.getMessage());
+            Thread.currentThread().interrupt();
         }
 
         List<Integer> newList = new ArrayList<>();
