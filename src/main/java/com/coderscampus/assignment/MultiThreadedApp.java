@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
 public class MultiThreadedApp {
     public static void main(String[] args) throws InterruptedException {
 
-        ExecutorService executorService = Executors.newFixedThreadPool(24);
+        ExecutorService executorService = Executors.newCachedThreadPool();
         ConcurrentHashMap<Integer, Integer> uniqueNumberOccurrences = new ConcurrentHashMap<>();
         List<CompletableFuture<Void>> numberProcessFutures = new ArrayList<>();
 
